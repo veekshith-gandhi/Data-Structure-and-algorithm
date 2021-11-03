@@ -1,0 +1,47 @@
+* partition procedure
+
+
+# Quick sort
+Quicksort is a divide-and-conquer algorithm. It works by selecting a 
+'pivot' element from the array and partitioning the other elements into two sub-arrays according 
+to whether they are less than or greater than the pivot
+**Sample Code:-**
+
+```java
+
+algorithm quicksort(A,lo,hi)
+if lo<hi then
+p := partition(A,lo,hi)
+quicksort(A,lo,p-1)
+quicksort(A,p+1,hi)
+algorithm partition(A,lo,hi)
+pivot:=A[hi]
+i:=lo
+for j:=lo to hi do
+if A[j]<pivot then
+swap A[i] with A[j]
+i:=i+1
+swap A[i] with A[hi]
+return i
+
+```
+**Time complexity:-**
+case1 : sorted O(n^2)
+case2 : not sorted O(nlogn)
+
+T(n)  represents, sorting n elements
+T(n)   =  n + T(n-1)       if n>1
+1                     if n==1
+if you solve above equation by using back substitution we can get it as **O(n^2)**
+**Space complexity:-**
+It does not use any extra array to sort. but at worst we may require a 
+stack of size n, to store all function calls, so the space complexity of quicksort 
+was **O(n).**
+**Some more points on quick sort:-**
+
+- It is in place sorting algorithm
+
+- It is not stable sorting algorithm
+
+Q1 :why quick sort is quick ?
+-> 2 Sorted array trying to merge

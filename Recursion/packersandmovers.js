@@ -24,14 +24,14 @@ function solving(input) {
   let inp = input[0].split(" ");
   let k = inp[0];
   let n = inp[1];
-  let arr = input[1].split(" ");
+  let arr = input[1].split(" ").map(Number);
 
   let result = fun(arr, n, k);
   console.log(result);
 }
 
 function fun(arr, n, k) {
-  if (k == 1 || k == 0) {
+  if (k == 0) {
     return 1;
   }
   if (k < 0) {
