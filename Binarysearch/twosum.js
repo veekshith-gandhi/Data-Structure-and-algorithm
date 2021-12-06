@@ -15,7 +15,8 @@ function solving(input) {
 
   let low = 0;
   let high = N - 1;
-  console.log(arr[low], arr[high]);
+  console.log(arr);
+  // console.log(arr[low], arr[high]);
   while (low <= high) {
     let mid = low - Math.floor((high + low) / 2);
     if (arr[low] + arr[high] == key) {
