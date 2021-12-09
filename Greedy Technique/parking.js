@@ -4,25 +4,39 @@ solving(`4
 
 function solving(input) {
   input = input.split("\n");
-  let K = input[0];
+  let K = +input[0];
+
   let arrival = input[1].split(" ").map(Number);
+  let N = arrival.length;
   let depart = input[2].split(" ").map(Number);
-  arrival.sort((a, b) => a - b);
-  depart.sort((a, b) => a - b);
-  let result = [];
-  for (let i = 0; i < arrival.length; i++) {
-    result.push(Math.abs(arrival[i] - depart[i]));
-  }
-  let isparking = true;
-  console.log(arrival, depart);
-  for (let i = 0; i < result.length - 1; i++) {
-    if (result[i] < result[i + 1]) {
-      isparking = false;
+  let M = depart.length;
+  let final1 = arrival.sort((a, b) => a - b);
+  let final2 = depart.sort((a, b) => a - b);
+  console.log(final1);
+  console.log(final2);
+
+  let i = 1;
+  let j = 0;
+  let pl = 1;
+  let res = 1;
+  while (i < N && j < M) {
+    if (final1[i] <= final2[j]) {
+      i++;
+      pl++;
+      console.log(pl, "i");
+    } else if (final1[i] >= final2[j]) {
+      j++;
+      pl--;
+      console.log(pl, "j");
+    }
+    if (pl > res) {
+      res = pl;
     }
   }
-  if (isparking) {
+  if (K >= res) {
     console.log("Possible");
   } else {
+    console.log(res, K);
     console.log("Not Possible");
   }
 }
