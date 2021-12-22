@@ -1,6 +1,6 @@
-solving(`3
-4 -4 2
-4 0 5`);
+solving(`10
+4 -4 2 -4 6 -8 19 3 4 -2
+4 0 9 7 4 -8 6 -9 -3 -1`);
 
 function solving(input) {
   input = input.split("\n");
@@ -10,10 +10,12 @@ function solving(input) {
   axis.sort((a, b) => a - b);
   room.sort((a, b) => a - b);
   let diff = [];
-  console.log(axis, room);
+  console.log(axis);
+  console.log(room);
   for (let i = 0; i < N; i++) {
     diff.push(Math.abs(axis[i] - room[i]));
   }
+  console.log(diff);
   let max = 0;
   for (let i = 0; i < N; i++) {
     if (diff[i] > max) {
