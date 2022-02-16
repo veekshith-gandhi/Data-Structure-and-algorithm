@@ -12,6 +12,10 @@ function reverse1(input) {
     console.log(newArray.join(" "))
 
 }
+/**
+ * O(n)
+ */
+
 
 reverse2(`5
 1 2 3 4 5`)
@@ -31,3 +35,7 @@ function reverse2(input) {
     console.log(array.join(" "))
 
 }
+/**
+ * two pointer optimize the run time 
+ * O(1)
+ */
