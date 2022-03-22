@@ -1,5 +1,8 @@
 /** @format
  * not divisible by k and their count
+ * Given an integer K and an array arr[] consisting of N
+ * positive integers, the task is to find the number of
+ * subarrays whose sum modulo K is equal to the size of the subarray.
  */
 
 solving(`4 3

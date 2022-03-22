@@ -36,6 +36,7 @@ function nextGreater2(input) {
   let n = +input[0];
   let array = input[1].split(" ").map(Number);
   let stack = [];
+
   let res = "";
   for (let i = n - 1; i >= 0; i--) {
     while (stack[stack.length - 1] < array[i] && stack.length !== 0) {
