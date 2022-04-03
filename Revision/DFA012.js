@@ -28,7 +28,7 @@ function solving(input) {
     let right = array.length - 1;
     let mid = 0;
 
-    while (mid < right) {
+    while (mid <= right) {
       switch (array[mid]) {
         case 0:
           swap(mid, left, array);
