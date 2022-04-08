@@ -13,11 +13,11 @@ function solving(input) {
     for (let i = 0; i < start; i++) {
       sum.push(array[i]);
     }
-    console.log(sum.join(""));
+    console.log(sum);
     for (let i = start; i < l; i++) {
       sum.shift();
       sum.push(array[i]);
-      console.log(sum.join(""));
+      console.log(sum);
     }
     start = start + 1;
   }

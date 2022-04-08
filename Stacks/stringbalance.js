@@ -11,6 +11,7 @@ function solving(inp) {
     } else {
       stack.push(array[i]);
     }
+    // stack.push(array[i]);
   }
-  console.log(stack);
+  console.log(stack.join(""));
 }
