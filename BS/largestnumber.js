@@ -5,8 +5,8 @@
  * rroted inddex shown bellow
  *  @format */
 
-solving(`10
-4 7 9 12 21 22 23 24 25 1`);
+solving(`9
+10 11 12 13 0 1 2 3 4`);
 
 function solving(input) {
   input = input.split("\n");

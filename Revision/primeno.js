@@ -12,7 +12,7 @@ function solving(input) {
     if (i !== 1) {
       let res = prime(i);
       if (res) {
-        console.log("i", i);
+        // console.log("i", i);
         sum = sum + i;
       }
     }
@@ -22,6 +22,7 @@ function solving(input) {
 
 function prime(param) {
   for (let i = 2; i < param; i++) {
+    console.log(param, i);
     if (param % i == 0) {
       return false;
     }

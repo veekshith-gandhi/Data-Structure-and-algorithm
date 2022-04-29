@@ -1,4 +1,6 @@
-/** @format */
+/**
+ * find the sum 6 in all direction
+ *  @format */
 
 solving(`3 3 6
 3 2 1
