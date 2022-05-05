@@ -1,3 +1,5 @@
+/** @format */
+
 function runProgram(input) {
   var a = Number(input);
 }

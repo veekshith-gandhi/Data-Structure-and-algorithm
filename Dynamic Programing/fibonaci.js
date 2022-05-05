@@ -1,3 +1,5 @@
+/** @format */
+
 solving(`9`);
 // top down
 function solving(input) {
