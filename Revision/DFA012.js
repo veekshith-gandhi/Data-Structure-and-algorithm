@@ -1,6 +1,6 @@
 /** @format
  * dutch national flag algo
- * if swaped out elemnt zero comes then problem so not riting mid++ in case 2
+ * if swaped out elemnt zero comes then problem so not riting cur++ in case 2
  * o(n)
  * o(1)
  */
@@ -26,22 +26,22 @@ function solving(input) {
     console.log(array);
     let left = 0;
     let right = array.length - 1;
-    let mid = 0;
+    let cur = 0;
 
-    while (mid <= right) {
-      switch (array[mid]) {
+    while (cur <= right) {
+      switch (array[cur]) {
         case 0:
-          swap(mid, left, array);
+          swap(cur, left, array);
           left++;
-          mid++;
+          cur++;
           break;
 
         case 1:
-          mid++;
+          cur++;
           break;
 
         case 2:
-          swap(mid, right, array);
+          swap(cur, right, array);
           right--;
           break;
 
@@ -55,9 +55,9 @@ function solving(input) {
     console.log(array.join(" "));
   }
 }
-function swap(mid, direction, array) {
-  let temp = array[mid];
-  array[mid] = array[direction];
+function swap(cur, direction, array) {
+  let temp = array[cur];
+  array[cur] = array[direction];
   array[direction] = temp;
   return array;
 }
